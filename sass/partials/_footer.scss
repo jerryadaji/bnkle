@@ -1,0 +1,147 @@
+.main-footer {
+	background-color: $primary;
+
+	.content {
+		padding: 60px 0 10px;
+
+		@include MQ(M) {
+			padding: 80px 0 20px;
+		}
+
+		.brand {
+			margin-bottom: 1.5rem;
+
+			.logo {
+				width: 6em;
+
+				@include MQ(M) {
+					width: 5em;
+				}
+			}
+		}
+
+		.footer-title {
+			color: white;
+			font-weight: 700;
+			font-size: 1rem;
+			margin-bottom: 1.5rem;
+
+			@include MQ(M) {
+				margin-bottom: 2rem;
+			}
+		}
+
+		.footer-text {
+			color: white;
+			margin-bottom: 0.75rem;
+
+			a {
+				color: $white;
+				transition: all 0.3s ease;
+
+				&:hover {
+					color: $secondary;
+					transition: all 0.3s ease;
+				}
+			}
+		}
+
+		.contact-text {
+			font-size: 0.9rem;
+			font-weight: 400;
+			line-height: 1.7em;
+			margin-bottom: 1.25rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.social-media {
+	font-size: 0.7rem;
+	color: white;
+
+	li {
+		display: inline-block;
+		margin: 0 2rem 0 0;
+
+		&:last-child {
+			margin: 0;
+		}
+		
+		@include MQ(S){
+			display: block;
+			margin: 0 0 0.75rem 0;
+		}
+
+		a {
+			color: $white;
+			font-size: 1.25rem;
+
+			i {
+				color: white !important;
+				transition: all 0.3s ease;
+			}
+
+			&:hover {
+				color: $primary !important;
+				transition: all 0.3s ease;
+
+				i {
+					color: $secondary !important;
+					transition: all 0.3s ease;
+				}
+			}
+		}
+	}
+}
+
+.footer-form {
+	display: flex;
+
+	input {
+		outline: 0;
+	}
+
+	.email {
+		background: transparent;
+		border-right: 0;
+		border: 1px solid white;
+		border-right: 0;
+		color: white;
+		flex: 1;
+		font-size: 0.8rem;
+		padding: 0.8em 1em;
+
+		&::placeholder {
+			color: rgba(255, 255, 255, 0.7);
+			opacity: 1;
+		}
+
+		&:-ms-input-placeholder {
+			color: rgba(255, 255, 255, 0.7);
+		}
+
+		&::-ms-input-placeholder {
+			color: rgba(255, 255, 255, 0.7);
+		}
+	}
+
+	.submit {
+		background-color: $white;
+		border: 0;
+		color: $primary;
+		cursor: pointer;
+		font-size: 1rem;
+		font-weight: 500;
+		padding: 0 20px;
+		transition: all 0.4s ease;
+
+		&:hover {
+			background-color: $secondary;
+			transition: all 0.4s ease;
+		}
+	}
+}

@@ -1,0 +1,43 @@
+.progress-line{
+	figure{
+		align-items: center;
+		display: flex;
+		position: relative;
+		
+		@include MQ(M){
+			&:before{
+				background-color: black;
+				bottom: 0;
+				content: "";
+				left: 50%;
+				position: absolute;
+				width: 1px;
+				top: 0;
+				z-index: 0;
+			}
+		}
+		
+		img{
+			position: relative;
+			z-index: 1;
+		}
+	}
+	
+	&:first-child{
+		figure{
+			&:before{
+				bottom: 0;
+				top: 50%;
+			}
+		}
+	}
+	
+	&:last-child{
+		figure{
+			&:before{
+				bottom: 50%;
+				top: 0;
+			}
+		}
+	}
+}

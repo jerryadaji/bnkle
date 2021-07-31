@@ -1,0 +1,32 @@
+
+$S: 576px; // Small phones Styles are written for this breakpoint by default, so no need to specify it.
+$M: 768px; // Phablets   
+$L: 992px; // 10" Tablets and desktops
+$XL: 1200px; // desktops..  
+
+/* Theme */
+$primary: #023060;
+$secondary: #68BCE2;
+$accent: #F1B54C;
+$light: #F1FAFE;
+$white: #ffffff;
+$red: red;
+
+// Font Size
+$font-size-xxl: 4rem;
+$font-size-xl: 3rem;
+$font-size-large: 1.5rem;
+$font-size-normal: 1rem;
+
+// Font Weight
+$font-weight-bold: 700;
+$font-weight-regular: 400;
+
+// Line height
+$line-height-large: 1.7em;
+$line-height-normal: 1.5em;
+$line-height-small: 1.25em;
+
+$page-header-mobile-height: 60px;
+$page-header-desktop-height: 80px;
+

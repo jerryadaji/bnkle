@@ -1,0 +1,396 @@
+.form-page-title {
+	font-size: 1.25rem;
+	text-align: center;
+	margin-bottom: 1em;
+
+	@include MQ(L) {
+		font-size: 1.25rem;
+		margin-bottom: 2em;
+	}
+
+	.light {
+		font-size: 0.9em;
+		font-weight: 300;
+	}
+
+	.hightlight {
+		font-weight: 600;
+		position: relative;
+		padding-bottom: 0.25em;
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 8px;
+			right: 8px;
+			height: 2px;
+			background-color: $primary;
+		}
+
+
+	}
+
+	.light,
+	.hightlight {
+		display: inline-block;
+
+		@include MQ(M) {
+			display: inline;
+		}
+	}
+}
+
+.form-wrapper {
+	padding: 40px 20px;
+	background-color: white;
+	box-shadow: 0px 3px 15px 0 rgba(46, 61, 73, 0.2);
+	border-radius: 0.5em;
+
+	@include MQ(M) {
+		padding: 60px 40px 40px;
+	}
+}
+
+.form-title {
+	font-size: 1.5em;
+	font-weight: 800;
+	color: $secondary;
+	margin-bottom: 1em;
+
+	&.lg {
+		font-size: 2.4em;
+	}
+
+	@include MQ(M) {
+		margin-bottom: 1em;
+	}
+}
+
+.form-subtitle {
+	font-size: 0.9em;
+	font-weight: 500;
+	line-height: 1.5em;
+	color: #AAABB0;
+	margin-bottom: 2em;
+
+	@include MQ(M) {
+		margin-bottom: 2em;
+	}
+}
+
+.form-header-section {
+	display: flex;
+	align-items: center;
+	margin-bottom: 4em;
+
+	.form-title {
+		padding-right: 30px;
+		margin-bottom: 0;
+		border-right: 0.5px solid $secondary;
+
+		@include MQ(M) {}
+	}
+
+	.form-subtitle {
+		flex: 1;
+		line-height: 1.4em;
+		padding-left: 30px;
+		margin-bottom: 0;
+		border-left: 0.5px solid $secondary;
+
+		@include MQ(M) {}
+	}
+}
+
+.form {
+	.form-item {
+		margin-bottom: 1.5rem;
+
+		label {
+			display: block;
+			font-size: 0.8em;
+			font-weight: 600;
+			line-height: 1.4em;
+			color: $primary;
+			margin-bottom: 0.2rem;
+		}
+
+
+		.validation-error,
+		.invalid-feedback {
+			display: none;
+			font-weight: 400;
+			font-size: 0.7rem;
+			color: $accent;
+			margin-top: 0.5em;
+		}
+
+		input,
+		select,
+		textarea {
+			display: block;
+			width: 100%;
+			outline: none;
+			box-shadow: none;
+			border: 1px solid gainsboro;
+			border-radius: 0.4rem;
+			font-weight: 500;
+			font-size: 0.8rem;
+			color: black;
+			padding: 0.75rem 1rem;
+			transition: all 0.4s ease;
+
+			&:focus {
+				border-color: $secondary;
+				transition: all 0.4s ease;
+			}
+
+			&::placeholder {
+				/* Chrome, Firefox, Opera, Safari 10.1+ */
+				color: #818181;
+				opacity: 1;
+				/* Firefox */
+			}
+
+			&:-ms-input-placeholder {
+				/* Internet Explorer 10-11 */
+				color: #818181;
+			}
+
+			&::-ms-input-placeholder {
+				/* Microsoft Edge */
+				color: #818181;
+			}
+		}
+
+		textarea {
+			line-height: 1.4rem;
+		}
+
+		&.error {
+
+			input,
+			select,
+			textarea {
+				border-color: $accent;
+			}
+
+			.validation-error {
+				display: block;
+			}
+		}
+
+		&.validated {
+
+			input,
+			select,
+			textarea {
+				border-color: $secondary;
+			}
+		}
+
+		&.required {
+			label {
+				&:after {
+					content: "*";
+					color: $accent;
+				}
+			}
+		}
+	}
+
+	.invalid-feedback {
+		display: none;
+		font-weight: 400;
+		font-size: 0.7rem;
+		color: $primary;
+		margin-top: 0.5em;
+	}
+
+	/* Select2 */
+	.select2-container {
+		width: 100% !important;
+	}
+
+	.select2,
+	.select2-selection__placeholder,
+	.select2-selection__rendered {
+		font-size: 0.9em;
+
+	}
+
+	.select2-selection__rendered {
+		line-height: 1em !important;
+		padding: 0.75em;
+	}
+
+	.select2-container .select2-selection--single {
+		height: auto;
+	}
+
+	.select2-container--focus {
+		outline: none !Important;
+	}
+}
+
+.form-cta {
+	text-align: center;
+	margin-top: 3rem;
+
+	.sign-in,
+	.terms {
+		font-size: 0.8rem;
+		font-weight: 500;
+		margin-bottom: 0.75rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.sign-in {
+		a {
+			color: $secondary;
+		}
+	}
+
+	.terms {
+		a {
+			color: $accent;
+		}
+	}
+}
+
+
+
+
+
+.mailing-list-form {
+	display: flex;
+	position: relative;
+
+	&:before {
+		content: "\f003";
+		position: absolute;
+		width: 2.4em;
+		height: 2.4em;
+		background-color: white;
+		color: black;
+		border-radius: 50%;
+		top: 50%;
+		left: 5px;
+		transform: translateY(-50%);
+		font-family: FontAwesome;
+		font-size: 0.8em;
+		padding: 0.7em 0.7em;
+		transition: all 0.3s ease;
+	}
+
+	&:hover {
+		&:before {
+			background-color: black;
+			color: white;
+			transition: all 0.3s ease;
+		}
+	}
+
+	.mail-field {
+		display: inline-block;
+		outline: 0;
+		font-weight: 500;
+		color: white;
+		font-size: 1em;
+		line-height: 1.5em;
+		background-color: transparent;
+		padding: 0.5rem 2em 0.5rem 50px;
+		border: 1px solid white;
+		border-right: 0;
+		border-radius: 1.2em 0 0 1.2em;
+		transition: all 0.4s ease;
+		position: relative;
+
+
+	}
+
+	.submit-btn {
+		display: inline-block;
+		font-size: 1em;
+		line-height: 1.5em;
+		padding: 0.5rem 2em;
+		color: white;
+		background-color: $primary;
+		border: 0;
+		outline: 0;
+		border: 1px solid $primary;
+		border-radius: 0 1.2em 1.2em 0;
+		cursor: pointer;
+
+		&:hover {
+			background-color: white;
+			color: $primary;
+			border-color: white;
+		}
+	}
+
+}
+
+.coming-soon-form {
+
+
+	.form-item {
+		margin-bottom: 1rem;
+
+		label {
+			display: block;
+			font-size: 0.8em;
+			font-weight: 600;
+			margin-bottom: 0.5em;
+		}
+
+		input,
+		textarea {
+			display: block;
+			width: 100%;
+			outline: 0;
+			border: 0;
+			font-weight: 400;
+			font-size: 0.9em;
+			padding: 0.5rem 0.8em;
+		}
+
+		textarea {
+			line-height: 1.4rem;
+		}
+	}
+
+	.form-submit {
+		text-align: right;
+		margin-top: 1.5rem;
+
+		input {
+			outline: 0;
+			border: 2px solid white;
+			padding: 0.5rem 2rem;
+			background-color: transparent;
+			color: white;
+			font-size: 0.9em;
+			cursor: pointer;
+			transition: all 0.4s ease;
+
+			&:hover {
+				transition: all 0.4s ease;
+				background-color: white;
+				border-color: white;
+				color: $secondary;
+			}
+		}
+	}
+}
+
+/*
+*
+*
+*    
+*
+*/

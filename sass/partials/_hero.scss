@@ -1,0 +1,43 @@
+.hero {
+	align-items: center;
+	background-position: center!important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	display: flex;
+	min-height: 300px; 
+	overflow: hidden;
+	position: relative;
+
+	@include MQ(L) {
+		min-height: 80vh;
+	}
+
+	&:before{
+		background: linear-gradient(90.01deg, rgba(2, 48, 96, 0.4) 0.01%, rgba(196, 196, 196, 0) 91.62%);
+		bottom: 0;
+		content: "";
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 1;
+	}
+
+	>*{
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.blog-thumbnail{
+	align-items: center;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	margin-bottom: 1rem;
+	min-height: 200px;
+	
+	@include MQ(L) {
+		min-height: 300px;
+	}
+}

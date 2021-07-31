@@ -1,0 +1,146 @@
+.page-header {
+	align-items: center;
+	background-color: $white;
+	border-bottom: 1px solid gainsboro;
+	display: flex;
+	font-weight: 400;
+	height: $page-header-mobile-height;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+
+	@include MQ(L) {
+		height: $page-header-desktop-height;
+	}
+
+	.container {
+		align-items: center;
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+	}
+
+	.brand {
+		flex: 1;
+		position: relative;
+		z-index: 1;
+
+		@include MQ(L) {
+			flex: none;
+		}
+
+		img {
+			height: 2em;
+
+			@include MQ(L) {
+				height: 2.5em;
+			}
+		}
+	}
+
+	.main-navigation {
+		flex: 1;
+		display: flex;
+		align-items: center;
+
+		display: block;
+		position: fixed;
+		top: 60px;
+		left: 0;
+		right: 0;
+		z-index: -1;
+
+		background-color: $white;
+
+		@include MQ(L) {
+			padding: 0;
+			padding-left: 4em;
+			margin: 0;
+			border: 0;
+			display: flex;
+			position: static;
+			z-index: 1;
+
+			justify-content: flex-end;
+		}
+	}
+
+	.navigation-list {
+		display: none;
+		padding: 1rem 15px 0;
+
+		@include MQ(L) {
+			display: block;
+			padding: 0;
+			background-color: transparent !important;
+		}
+
+		> li {
+			display: block;
+			text-align: center;
+			padding-bottom: 20px;
+			border-bottom: 1px solid rgba($primary, 0.15);
+			margin-bottom: 20px;
+
+			&:last-child {
+				border-bottom: 0;
+				margin: 0;
+			}
+
+			@include MQ(L) {
+				display: inline-block;
+				border-bottom: 0;
+				margin: 0;
+				padding: 0;
+				margin-right: 4em;
+				float: left;
+			}
+
+			&.active {
+				a {
+					color: $secondary;
+				}
+			}
+
+			> a {
+				display: block;
+				font-size: 0.9em;
+				font-weight: 500;
+				color: $primary;
+				border-top: 2px solid transparent;
+				transition: opacity 0.3s ease;
+
+				&.active {
+					@include MQ(L) {
+						border-color: secondary;
+					}
+				}
+
+				&:hover {
+					opacity: 0.7;
+					transition: opacity 0.3s ease;
+				}
+
+				@include MQ(L) {
+					padding: 1em 0;
+				}
+			}
+		}
+	}
+
+	.home-button {
+		.hamburger-box {
+			margin-top: 6px;
+		}
+
+		@include MQ(L) {
+			display: none;
+		}
+
+		.menu-btn {
+			outline: none;
+		}
+	}
+}

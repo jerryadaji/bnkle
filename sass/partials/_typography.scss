@@ -1,0 +1,186 @@
+// Size
+h1 {
+	color: $primary;
+	font-size: 3rem;
+	font-weight: $font-weight-bold;
+	line-height: $line-height-small;
+
+	@include MQ(M) {
+		font-size: $font-size-xxl;
+	}
+}
+
+h2 {
+	color: $primary;
+	font-size: 2rem;
+	font-weight: $font-weight-bold;
+	line-height: $line-height-small;
+
+	@include MQ(M) {
+		font-size: $font-size-xl;
+	}
+}
+
+h3 {
+	color: $primary;
+	font-size: $font-size-normal;
+	font-weight: $font-weight-bold;
+	
+	@include MQ(M) {
+		font-size: 2rem;
+	}
+}
+
+p {
+	font-size: $font-size-normal;
+	line-height: $line-height-large;
+}
+
+.large-text{
+	font-size: $font-size-normal;
+	line-height: $line-height-normal;
+	
+	@include MQ(M) {
+		font-size: $font-size-large;
+	}
+}
+
+.color-secondary{
+	color: $secondary;
+}
+
+// RTE
+.text-box {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		line-height: 1.1em;
+		margin-top: 5px;
+		margin-bottom: 20px;
+
+		&:first-child {
+			padding-top: 0;
+		}
+	}
+
+	> h1 {
+		font-size: 2em;
+
+		@include MQ(M) {
+			font-size: 2em;
+		}
+	}
+
+	> h2 {
+		font-size: 1.8em;
+
+		@include MQ(M) {
+			font-size: 1.8em;
+		}
+	}
+
+	> h3 {
+		font-size: 1.4em;
+
+		@include MQ(M) {
+			font-size: 1.4em;
+		}
+	}
+
+	> h4 {
+		font-size: 1.2em;
+
+		@include MQ(M) {
+			font-size: 1.2em;
+		}
+	}
+
+	> h5 {}
+
+	> h6 {}
+
+	> p {
+		line-height: 1.5em;
+		margin-bottom: 20px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	strong {
+		font-weight: 600;
+	}
+
+	ol,
+	ul {
+		li {
+			font-size: 0.9rem;
+			font-weight: 300;
+			line-height: 2em;
+			margin-bottom: 10px;
+
+			&:last-child {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	ol {
+		padding-left: 20px;
+		list-style-type: decimal;
+
+		li {
+			padding-left: 20px;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+
+		li {
+
+			display: flex;
+
+			&:before {
+				content: '\f192';
+				font-family: Fontawesome;
+				padding-right: 2em;
+			}
+
+			&:last-child {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	img {
+		display: inline-block;
+		margin-bottom: 15px;
+		height: auto;
+	}
+
+	iframe {
+		display: block;
+		width: 100%;
+		margin-bottom: 15px;
+	}
+
+	&.sm {
+		p {
+			font-size: 0.9em;
+			line-height: 1.7em;
+		}
+	}
+
+	table {
+		font-size: 0.9em;
+
+		thead {
+			line-height: 1.2em;
+		}
+	}
+}

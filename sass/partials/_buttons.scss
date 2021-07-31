@@ -1,15 +1,15 @@
-.button {
+.button, .form input[type="submit"] {
 	display: inline-block;
-	font-weight: 600;
-	text-align: center;
-	padding: 1em 2em;
-	border: 0;
-	outline: 0;
-	border: 1px solid transparent;
-	border-radius: 0.25em;
-	cursor: pointer;
+	font-weight: 600 !important;
+	text-align: center !important;
+	padding: 1em 2em !important;
+	border: 0 !important;
+	outline: 0 !important;
+	border: 1px solid transparent !important;
+	border-radius: 0.25em !important;
+	cursor: pointer !important;
 	text-transform: uppercase;
-	transition: all 0.4s ease;
+	transition: all 0.4s ease !important;
 
 	&:hover {
 		transition: all 0.4s ease;
@@ -17,21 +17,25 @@
 }
 
 .button-primary {
-	color: white;
-	background-color: $primary;
+	color: white !important;
+	background-color: $primary !important;
 
 	&:hover {
-		color: white;
-		background-color: #034596;
+		color: white !important;
+		background-color: #034596 !important;
 	}
 }
 
-.button-secondary {
-	background-color: $secondary;
-	color: white;
+.button-secondary, .form input[type="submit"] {
+	background-color: $secondary !important;
+	color: white !important;
 
 	&:hover {
-		color: white;
-		background-color: #88AAD3;
+		color: white !important;
+		background-color: #88AAD3 !important;
 	}
+}
+
+.form input[type="submit"]{
+	margin: 0;
 }

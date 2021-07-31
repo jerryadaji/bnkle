@@ -1371,44 +1371,49 @@ p {
 }
 
 /* line 1, ../sass/partials/_buttons.scss */
-.button {
+.button, .form input[type="submit"] {
   display: inline-block;
-  font-weight: 600;
-  text-align: center;
-  padding: 1em 2em;
-  border: 0;
-  outline: 0;
-  border: 1px solid transparent;
-  border-radius: 0.25em;
-  cursor: pointer;
+  font-weight: 600 !important;
+  text-align: center !important;
+  padding: 1em 2em !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border: 1px solid transparent !important;
+  border-radius: 0.25em !important;
+  cursor: pointer !important;
   text-transform: uppercase;
-  transition: all 0.4s ease;
+  transition: all 0.4s ease !important;
 }
 /* line 14, ../sass/partials/_buttons.scss */
-.button:hover {
+.button:hover, .form input[type="submit"]:hover {
   transition: all 0.4s ease;
 }
 
 /* line 19, ../sass/partials/_buttons.scss */
 .button-primary {
-  color: white;
-  background-color: #023060;
+  color: white !important;
+  background-color: #023060 !important;
 }
 /* line 23, ../sass/partials/_buttons.scss */
 .button-primary:hover {
-  color: white;
-  background-color: #034596;
+  color: white !important;
+  background-color: #034596 !important;
 }
 
 /* line 29, ../sass/partials/_buttons.scss */
-.button-secondary {
-  background-color: #68BCE2;
-  color: white;
+.button-secondary, .form input[type="submit"] {
+  background-color: #68BCE2 !important;
+  color: white !important;
 }
 /* line 33, ../sass/partials/_buttons.scss */
-.button-secondary:hover {
-  color: white;
-  background-color: #88AAD3;
+.button-secondary:hover, .form input[type="submit"]:hover {
+  color: white !important;
+  background-color: #88AAD3 !important;
+}
+
+/* line 39, ../sass/partials/_buttons.scss */
+.form input[type="submit"] {
+  margin: 0;
 }
 
 /* line 1, ../sass/partials/_navigation.scss */
@@ -1875,55 +1880,6 @@ p {
 }
 
 /* line 1, ../sass/partials/_forms.scss */
-.form-page-title {
-  font-size: 1.25rem;
-  text-align: center;
-  margin-bottom: 1em;
-  /* Landscape tablets and desktop or laptops */
-}
-@media only screen and (min-width: 992px) {
-  /* line 1, ../sass/partials/_forms.scss */
-  .form-page-title {
-    font-size: 1.25rem;
-    margin-bottom: 2em;
-  }
-}
-/* line 11, ../sass/partials/_forms.scss */
-.form-page-title .light {
-  font-size: 0.9em;
-  font-weight: 300;
-}
-/* line 16, ../sass/partials/_forms.scss */
-.form-page-title .hightlight {
-  font-weight: 600;
-  position: relative;
-  padding-bottom: 0.25em;
-}
-/* line 21, ../sass/partials/_forms.scss */
-.form-page-title .hightlight:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 8px;
-  right: 8px;
-  height: 2px;
-  background-color: #023060;
-}
-/* line 34, ../sass/partials/_forms.scss */
-.form-page-title .light,
-.form-page-title .hightlight {
-  display: inline-block;
-  /* Tablets and phablets */
-}
-@media only screen and (min-width: 768px) {
-  /* line 34, ../sass/partials/_forms.scss */
-  .form-page-title .light,
-  .form-page-title .hightlight {
-    display: inline;
-  }
-}
-
-/* line 44, ../sass/partials/_forms.scss */
 .form-wrapper {
   padding: 40px 20px;
   background-color: white;
@@ -1932,80 +1888,14 @@ p {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 44, ../sass/partials/_forms.scss */
+  /* line 1, ../sass/partials/_forms.scss */
   .form-wrapper {
     padding: 60px 40px 40px;
   }
 }
 
-/* line 55, ../sass/partials/_forms.scss */
-.form-title {
-  font-size: 1.5em;
-  font-weight: 800;
-  color: #68BCE2;
-  margin-bottom: 1em;
-  /* Tablets and phablets */
-}
-/* line 61, ../sass/partials/_forms.scss */
-.form-title.lg {
-  font-size: 2.4em;
-}
-@media only screen and (min-width: 768px) {
-  /* line 55, ../sass/partials/_forms.scss */
-  .form-title {
-    margin-bottom: 1em;
-  }
-}
-
-/* line 70, ../sass/partials/_forms.scss */
-.form-subtitle {
-  font-size: 0.9em;
-  font-weight: 500;
-  line-height: 1.5em;
-  color: #AAABB0;
-  margin-bottom: 2em;
-  /* Tablets and phablets */
-}
-@media only screen and (min-width: 768px) {
-  /* line 70, ../sass/partials/_forms.scss */
-  .form-subtitle {
-    margin-bottom: 2em;
-  }
-}
-
-/* line 82, ../sass/partials/_forms.scss */
-.form-header-section {
-  display: flex;
-  align-items: center;
-  margin-bottom: 4em;
-}
-/* line 87, ../sass/partials/_forms.scss */
-.form-header-section .form-title {
-  padding-right: 30px;
-  margin-bottom: 0;
-  border-right: 0.5px solid #68BCE2;
-  /* Tablets and phablets */
-}
-/* line 95, ../sass/partials/_forms.scss */
-.form-header-section .form-subtitle {
-  flex: 1;
-  line-height: 1.4em;
-  padding-left: 30px;
-  margin-bottom: 0;
-  border-left: 0.5px solid #68BCE2;
-  /* Tablets and phablets */
-}
-
-/* line 106, ../sass/partials/_forms.scss */
-.form {
-  /* Select2 */
-}
-/* line 107, ../sass/partials/_forms.scss */
-.form .form-item {
-  margin-bottom: 1.5rem;
-}
-/* line 110, ../sass/partials/_forms.scss */
-.form .form-item label {
+/* line 13, ../sass/partials/_forms.scss */
+.form label {
   display: block;
   font-size: 0.8em;
   font-weight: 600;
@@ -2013,87 +1903,84 @@ p {
   color: #023060;
   margin-bottom: 0.2rem;
 }
-/* line 120, ../sass/partials/_forms.scss */
-.form .form-item .validation-error,
-.form .form-item .invalid-feedback {
+/* line 21, ../sass/partials/_forms.scss */
+.form .validation-error,
+.form .invalid-feedback {
   display: none;
   font-weight: 400;
   font-size: 0.7rem;
   color: #F1B54C;
   margin-top: 0.5em;
 }
-/* line 129, ../sass/partials/_forms.scss */
-.form .form-item input,
-.form .form-item select,
-.form .form-item textarea {
-  display: block;
-  width: 100%;
-  outline: none;
-  box-shadow: none;
-  border: 1px solid gainsboro;
-  border-radius: 0.4rem;
-  font-weight: 500;
-  font-size: 0.8rem;
+/* line 30, ../sass/partials/_forms.scss */
+.form input,
+.form select,
+.form textarea {
+  border: 1px solid gainsboro !Important;
+  border-radius: 0.4rem !Important;
+  box-shadow: none !important;
   color: black;
-  padding: 0.75rem 1rem;
+  display: block;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  outline: none !important;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
   transition: all 0.4s ease;
 }
-/* line 144, ../sass/partials/_forms.scss */
-.form .form-item input:focus,
-.form .form-item select:focus,
-.form .form-item textarea:focus {
-  border-color: #68BCE2;
+/* line 46, ../sass/partials/_forms.scss */
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  border-color: #68BCE2 !important;
   transition: all 0.4s ease;
 }
-/* line 149, ../sass/partials/_forms.scss */
-.form .form-item input::placeholder,
-.form .form-item select::placeholder,
-.form .form-item textarea::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
+/* line 51, ../sass/partials/_forms.scss */
+.form input::placeholder,
+.form select::placeholder,
+.form textarea::placeholder {
   color: #818181;
   opacity: 1;
-  /* Firefox */
 }
-/* line 156, ../sass/partials/_forms.scss */
-.form .form-item input:-ms-input-placeholder,
-.form .form-item select:-ms-input-placeholder,
-.form .form-item textarea:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
+/* line 56, ../sass/partials/_forms.scss */
+.form input:-ms-input-placeholder,
+.form select:-ms-input-placeholder,
+.form textarea:-ms-input-placeholder {
   color: #818181;
 }
-/* line 161, ../sass/partials/_forms.scss */
-.form .form-item input::-ms-input-placeholder,
-.form .form-item select::-ms-input-placeholder,
-.form .form-item textarea::-ms-input-placeholder {
-  /* Microsoft Edge */
+/* line 60, ../sass/partials/_forms.scss */
+.form input::-ms-input-placeholder,
+.form select::-ms-input-placeholder,
+.form textarea::-ms-input-placeholder {
   color: #818181;
 }
-/* line 167, ../sass/partials/_forms.scss */
-.form .form-item textarea {
+/* line 65, ../sass/partials/_forms.scss */
+.form textarea {
   line-height: 1.4rem;
 }
-/* line 173, ../sass/partials/_forms.scss */
-.form .form-item.error input,
-.form .form-item.error select,
-.form .form-item.error textarea {
+/* line 71, ../sass/partials/_forms.scss */
+.form.error input,
+.form.error select,
+.form.error textarea {
   border-color: #F1B54C;
 }
-/* line 179, ../sass/partials/_forms.scss */
-.form .form-item.error .validation-error {
+/* line 77, ../sass/partials/_forms.scss */
+.form.error .validation-error {
   display: block;
 }
-/* line 186, ../sass/partials/_forms.scss */
-.form .form-item.validated input,
-.form .form-item.validated select,
-.form .form-item.validated textarea {
+/* line 84, ../sass/partials/_forms.scss */
+.form.validated input,
+.form.validated select,
+.form.validated textarea {
   border-color: #68BCE2;
 }
-/* line 195, ../sass/partials/_forms.scss */
-.form .form-item.required label:after {
+/* line 93, ../sass/partials/_forms.scss */
+.form.required label:after {
   content: "*";
   color: #F1B54C;
 }
-/* line 203, ../sass/partials/_forms.scss */
+/* line 100, ../sass/partials/_forms.scss */
 .form .invalid-feedback {
   display: none;
   font-weight: 400;
@@ -2101,177 +1988,7 @@ p {
   color: #023060;
   margin-top: 0.5em;
 }
-/* line 212, ../sass/partials/_forms.scss */
-.form .select2-container {
-  width: 100% !important;
-}
-/* line 216, ../sass/partials/_forms.scss */
-.form .select2,
-.form .select2-selection__placeholder,
-.form .select2-selection__rendered {
-  font-size: 0.9em;
-}
-/* line 223, ../sass/partials/_forms.scss */
-.form .select2-selection__rendered {
-  line-height: 1em !important;
-  padding: 0.75em;
-}
-/* line 228, ../sass/partials/_forms.scss */
-.form .select2-container .select2-selection--single {
-  height: auto;
-}
-/* line 232, ../sass/partials/_forms.scss */
-.form .select2-container--focus {
-  outline: none !Important;
-}
 
-/* line 237, ../sass/partials/_forms.scss */
-.form-cta {
-  text-align: center;
-  margin-top: 3rem;
-}
-/* line 241, ../sass/partials/_forms.scss */
-.form-cta .sign-in,
-.form-cta .terms {
-  font-size: 0.8rem;
-  font-weight: 500;
-  margin-bottom: 0.75rem;
-}
-/* line 247, ../sass/partials/_forms.scss */
-.form-cta .sign-in:last-child,
-.form-cta .terms:last-child {
-  margin-bottom: 0;
-}
-/* line 253, ../sass/partials/_forms.scss */
-.form-cta .sign-in a {
-  color: #68BCE2;
-}
-/* line 259, ../sass/partials/_forms.scss */
-.form-cta .terms a {
-  color: #F1B54C;
-}
-
-/* line 269, ../sass/partials/_forms.scss */
-.mailing-list-form {
-  display: flex;
-  position: relative;
-}
-/* line 273, ../sass/partials/_forms.scss */
-.mailing-list-form:before {
-  content: "\f003";
-  position: absolute;
-  width: 2.4em;
-  height: 2.4em;
-  background-color: white;
-  color: black;
-  border-radius: 50%;
-  top: 50%;
-  left: 5px;
-  transform: translateY(-50%);
-  font-family: FontAwesome;
-  font-size: 0.8em;
-  padding: 0.7em 0.7em;
-  transition: all 0.3s ease;
-}
-/* line 291, ../sass/partials/_forms.scss */
-.mailing-list-form:hover:before {
-  background-color: black;
-  color: white;
-  transition: all 0.3s ease;
-}
-/* line 298, ../sass/partials/_forms.scss */
-.mailing-list-form .mail-field {
-  display: inline-block;
-  outline: 0;
-  font-weight: 500;
-  color: white;
-  font-size: 1em;
-  line-height: 1.5em;
-  background-color: transparent;
-  padding: 0.5rem 2em 0.5rem 50px;
-  border: 1px solid white;
-  border-right: 0;
-  border-radius: 1.2em 0 0 1.2em;
-  transition: all 0.4s ease;
-  position: relative;
-}
-/* line 316, ../sass/partials/_forms.scss */
-.mailing-list-form .submit-btn {
-  display: inline-block;
-  font-size: 1em;
-  line-height: 1.5em;
-  padding: 0.5rem 2em;
-  color: white;
-  background-color: #023060;
-  border: 0;
-  outline: 0;
-  border: 1px solid #023060;
-  border-radius: 0 1.2em 1.2em 0;
-  cursor: pointer;
-}
-/* line 329, ../sass/partials/_forms.scss */
-.mailing-list-form .submit-btn:hover {
-  background-color: white;
-  color: #023060;
-  border-color: white;
-}
-
-/* line 341, ../sass/partials/_forms.scss */
-.coming-soon-form .form-item {
-  margin-bottom: 1rem;
-}
-/* line 344, ../sass/partials/_forms.scss */
-.coming-soon-form .form-item label {
-  display: block;
-  font-size: 0.8em;
-  font-weight: 600;
-  margin-bottom: 0.5em;
-}
-/* line 351, ../sass/partials/_forms.scss */
-.coming-soon-form .form-item input,
-.coming-soon-form .form-item textarea {
-  display: block;
-  width: 100%;
-  outline: 0;
-  border: 0;
-  font-weight: 400;
-  font-size: 0.9em;
-  padding: 0.5rem 0.8em;
-}
-/* line 362, ../sass/partials/_forms.scss */
-.coming-soon-form .form-item textarea {
-  line-height: 1.4rem;
-}
-/* line 367, ../sass/partials/_forms.scss */
-.coming-soon-form .form-submit {
-  text-align: right;
-  margin-top: 1.5rem;
-}
-/* line 371, ../sass/partials/_forms.scss */
-.coming-soon-form .form-submit input {
-  outline: 0;
-  border: 2px solid white;
-  padding: 0.5rem 2rem;
-  background-color: transparent;
-  color: white;
-  font-size: 0.9em;
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-/* line 381, ../sass/partials/_forms.scss */
-.coming-soon-form .form-submit input:hover {
-  transition: all 0.4s ease;
-  background-color: white;
-  border-color: white;
-  color: #68BCE2;
-}
-
-/*
-*
-*
-*    
-*
-*/
 /* line 1, ../sass/partials/_backgrounds.scss */
 .bg-primary {
   background-color: #023060 !important;

@@ -1,12 +1,8 @@
 .form-wrapper {
-	padding: 40px 20px;
-	background-color: white;
+	padding: 1.5rem 2.5rem 3rem;
+	background-color: $white;
 	box-shadow: 0px 3px 15px 0 rgba(46, 61, 73, 0.2);
 	border-radius: 0.5em;
-
-	@include MQ(M) {
-		padding: 60px 40px 40px;
-	}
 }
 
 .form {
@@ -17,14 +13,7 @@
 		line-height: 1.4em;
 		color: $primary;
 		margin-bottom: 0.2rem;
-	}
-	.validation-error,
-	.invalid-feedback {
-		display: none;
-		font-weight: 400;
-		font-size: 0.7rem;
-		color: $accent;
-		margin-top: 0.5em;
+		margin-top: 1.5rem;
 	}
 
 	input,
@@ -37,7 +26,6 @@
 		display: block;
 		font-weight: 500;
 		font-size: $font-size-normal;
-		margin-bottom: 1.5rem;
 		outline: none !important;
 		padding: 0.5rem 0.75rem;
 		width: 100%;
@@ -47,62 +35,23 @@
 			border-color: $secondary !Important;
 			transition: all 0.4s ease;
 		}
-
-		&::placeholder {
-			color: #818181;
-			opacity: 1;
-		}
-
-		&:-ms-input-placeholder {
-			color: #818181;
-		}
-
-		&::-ms-input-placeholder {
-			color: #818181;
-		}
 	}
 
 	textarea {
-		line-height: 1.4rem;
+		line-height: $line-height-normal;
 	}
+}
 
-	&.error {
+.wpcf7 .ajax-loader{
+  bottom: 4.25rem !important;
+	position: absolute !important;
+  right: 3rem !important;
+}
 
-		input,
-		select,
-		textarea {
-			border-color: $accent;
-		}
-
-		.validation-error {
-			display: block;
-		}
-	}
-
-	&.validated {
-
-		input,
-		select,
-		textarea {
-			border-color: $secondary;
-		}
-	}
-
-	&.required {
-		label {
-			&:after {
-				content: "*";
-				color: $accent;
-			}
-		}
-	}
-
-	.invalid-feedback {
-		display: none;
-		font-weight: 400;
-		font-size: 0.7rem;
-		color: $primary;
-		margin-top: 0.5em;
-	}
+.wpcf7-response-output{
+	border: 0 !important;
+	font-weight: $font-weight-bold;
+	padding: 0 !important;
+	margin-bottom: 0 !important;
 }
 

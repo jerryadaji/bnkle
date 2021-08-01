@@ -1413,7 +1413,7 @@ p {
 
 /* line 39, ../sass/partials/_buttons.scss */
 .form input[type="submit"] {
-  margin: 0;
+  margin: 1.5rem 0 0 0;
 }
 
 /* line 1, ../sass/partials/_navigation.scss */
@@ -1881,20 +1881,13 @@ p {
 
 /* line 1, ../sass/partials/_forms.scss */
 .form-wrapper {
-  padding: 40px 20px;
-  background-color: white;
+  padding: 1.5rem 2.5rem 3rem;
+  background-color: #ffffff;
   box-shadow: 0px 3px 15px 0 rgba(46, 61, 73, 0.2);
   border-radius: 0.5em;
-  /* Tablets and phablets */
-}
-@media only screen and (min-width: 768px) {
-  /* line 1, ../sass/partials/_forms.scss */
-  .form-wrapper {
-    padding: 60px 40px 40px;
-  }
 }
 
-/* line 13, ../sass/partials/_forms.scss */
+/* line 9, ../sass/partials/_forms.scss */
 .form label {
   display: block;
   font-size: 0.8em;
@@ -1902,17 +1895,9 @@ p {
   line-height: 1.4em;
   color: #023060;
   margin-bottom: 0.2rem;
+  margin-top: 1.5rem;
 }
-/* line 21, ../sass/partials/_forms.scss */
-.form .validation-error,
-.form .invalid-feedback {
-  display: none;
-  font-weight: 400;
-  font-size: 0.7rem;
-  color: #F1B54C;
-  margin-top: 0.5em;
-}
-/* line 30, ../sass/partials/_forms.scss */
+/* line 19, ../sass/partials/_forms.scss */
 .form input,
 .form select,
 .form textarea {
@@ -1923,70 +1908,36 @@ p {
   display: block;
   font-weight: 500;
   font-size: 1rem;
-  margin-bottom: 1.5rem;
   outline: none !important;
   padding: 0.5rem 0.75rem;
   width: 100%;
   transition: all 0.4s ease;
 }
-/* line 46, ../sass/partials/_forms.scss */
+/* line 34, ../sass/partials/_forms.scss */
 .form input:focus,
 .form select:focus,
 .form textarea:focus {
   border-color: #68BCE2 !important;
   transition: all 0.4s ease;
 }
-/* line 51, ../sass/partials/_forms.scss */
-.form input::placeholder,
-.form select::placeholder,
-.form textarea::placeholder {
-  color: #818181;
-  opacity: 1;
-}
-/* line 56, ../sass/partials/_forms.scss */
-.form input:-ms-input-placeholder,
-.form select:-ms-input-placeholder,
-.form textarea:-ms-input-placeholder {
-  color: #818181;
-}
-/* line 60, ../sass/partials/_forms.scss */
-.form input::-ms-input-placeholder,
-.form select::-ms-input-placeholder,
-.form textarea::-ms-input-placeholder {
-  color: #818181;
-}
-/* line 65, ../sass/partials/_forms.scss */
+/* line 40, ../sass/partials/_forms.scss */
 .form textarea {
-  line-height: 1.4rem;
+  line-height: 1.5em;
 }
-/* line 71, ../sass/partials/_forms.scss */
-.form.error input,
-.form.error select,
-.form.error textarea {
-  border-color: #F1B54C;
+
+/* line 45, ../sass/partials/_forms.scss */
+.wpcf7 .ajax-loader {
+  bottom: 4.25rem !important;
+  position: absolute !important;
+  right: 3rem !important;
 }
-/* line 77, ../sass/partials/_forms.scss */
-.form.error .validation-error {
-  display: block;
-}
-/* line 84, ../sass/partials/_forms.scss */
-.form.validated input,
-.form.validated select,
-.form.validated textarea {
-  border-color: #68BCE2;
-}
-/* line 93, ../sass/partials/_forms.scss */
-.form.required label:after {
-  content: "*";
-  color: #F1B54C;
-}
-/* line 100, ../sass/partials/_forms.scss */
-.form .invalid-feedback {
-  display: none;
-  font-weight: 400;
-  font-size: 0.7rem;
-  color: #023060;
-  margin-top: 0.5em;
+
+/* line 51, ../sass/partials/_forms.scss */
+.wpcf7-response-output {
+  border: 0 !important;
+  font-weight: 700;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 /* line 1, ../sass/partials/_backgrounds.scss */

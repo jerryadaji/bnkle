@@ -40,6 +40,10 @@
 	textarea {
 		line-height: $line-height-normal;
 	}
+	
+	br{
+		display: none !important;
+	}
 }
 
 .wpcf7 .ajax-loader{
@@ -55,3 +59,10 @@
 	margin-bottom: 0 !important;
 }
 
+#comments{
+	margin: 0 auto;
+}
+
+#comments, #respond, .comments-area, #wpdcom {
+  max-width: 100%;
+}

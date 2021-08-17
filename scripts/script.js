@@ -5,6 +5,12 @@ $(document).ready(function () {
 		$("body").toggleClass("noScroll");
 		$(".main-content").toggleClass("open");
 	});
+	
+	$(".go-to-form").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#bnkle-contact-form").offset().top
+		}, 1000);
+	});
 });
 
 new WOW().init();

@@ -35,7 +35,8 @@
 			height: 2em;
 
 			@include MQ(L) {
-				height: 2.5em;
+				height: 4.75rem;
+				margin-left: -15%;
 			}
 		}
 	}
@@ -106,8 +107,8 @@
 
 			> a {
 				display: block;
-				font-size: 0.9em;
-				font-weight: 500;
+				font-size: $font-size-large;
+				font-weight: $font-weight-regular;
 				color: $primary;
 				border-top: 2px solid transparent;
 				transition: opacity 0.3s ease;

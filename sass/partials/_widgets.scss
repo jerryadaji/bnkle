@@ -1,4 +1,8 @@
 .progress-line{
+	&-number{
+		min-width: 1.5em;
+	}
+	
 	figure{
 		align-items: center;
 		display: flex;

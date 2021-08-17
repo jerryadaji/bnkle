@@ -10,6 +10,7 @@ img {
 
 body {
 	background-color: white;
+	font-size: $font-size-normal;
 	position: relative;
 	overflow-x: hidden;
 }
@@ -21,7 +22,7 @@ body {
 .main-content {
 	margin-top: $page-header-mobile-height;
 
-	@include MQ(M) {
+	@include MQ(L) {
 		margin-top: $page-header-desktop-height;
 	}
 }
@@ -81,4 +82,8 @@ a:active {
 .grayscale {
 	filter: grayscale(100%);
 	-webkit-filter: grayscale(100%);
+}
+
+.full-width{
+	flex: 1;
 }

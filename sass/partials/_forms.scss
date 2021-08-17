@@ -8,7 +8,7 @@
 .form {
 	label {
 		display: block;
-		font-size: 0.8em;
+		font-size: $font-weight-regular;
 		font-weight: 600;
 		line-height: 1.4em;
 		color: $primary;
@@ -54,9 +54,8 @@
 
 .wpcf7-response-output{
 	border: 0 !important;
-	font-weight: $font-weight-bold;
 	padding: 0 !important;
-	margin-bottom: 0 !important;
+	margin: 1.5rem 0 0 0 !important;
 }
 
 #comments{
@@ -65,4 +64,12 @@
 
 #comments, #respond, .comments-area, #wpdcom {
   max-width: 100%;
+}
+
+.wpd-prim-button{
+	background-color: $secondary !important;
+}
+
+#wpdcom .wpd-thread-head .wpd-thread-info, #wpdcom .wpd-thread-head .wpdiscuz-user-settings {
+  border-color: $secondary !important;
 }

@@ -4,8 +4,6 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/styles.css" media="screen, projection" rel="stylesheet" type="text/css" />
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Gothic+A1:300,400,500,600,700,800,900&display=swap");
 /* line 5, ../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -71,24 +69,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 4, ../sass/partials/_fonts.scss */
-body {
-  font-family: 'Gothic A1', sans-serif;
-  font-weight: 400;
-}
-
-/* line 9, ../sass/partials/_fonts.scss */
-.font-accent {
-  font-family: 'Righteous', cursive;
-  font-weight: 400;
-}
-
-/* line 14, ../sass/partials/_fonts.scss */
-.currency {
-  font-family: 'Roboto', sans-serif;
-}
-
 /* Theme */
+@font-face {
+  font-family: "DMSans-Bold";
+  src: url("../fonts/DMSans-Bold.ttf");
+}
+@font-face {
+  font-family: "HKGrotesk-Regular";
+  src: url("../fonts/hkgrotesk_regular.woff2");
+}
+/* line 11, ../sass/partials/_fonts.scss */
+body {
+  font-family: 'HKGrotesk-Regular';
+  font-weight: 400;
+}
+
+/* line 16, ../sass/partials/_fonts.scss */
+.font-accent {
+  font-family: 'DMSans-Bold', sans-serif;
+  font-weight: 700;
+}
+
 /*
 *
 *Padding Container Mixins BEGIN
@@ -124,33 +125,34 @@ img {
 /* line 11, ../sass/partials/global.scss */
 body {
   background-color: white;
+  font-size: 1rem;
   position: relative;
   overflow-x: hidden;
 }
 
-/* line 17, ../sass/partials/global.scss */
+/* line 18, ../sass/partials/global.scss */
 .noScroll {
   overflow: hidden;
 }
 
-/* line 21, ../sass/partials/global.scss */
+/* line 22, ../sass/partials/global.scss */
 .main-content {
   margin-top: 60px;
-  /* Tablets and phablets */
+  /* Landscape tablets and desktop or laptops */
 }
-@media only screen and (min-width: 768px) {
-  /* line 21, ../sass/partials/global.scss */
+@media only screen and (min-width: 992px) {
+  /* line 22, ../sass/partials/global.scss */
   .main-content {
-    margin-top: 80px;
+    margin-top: 100px;
   }
 }
 
-/* line 29, ../sass/partials/global.scss */
+/* line 30, ../sass/partials/global.scss */
 [class*='col-'] {
   padding: 0;
 }
 
-/* line 33, ../sass/partials/global.scss */
+/* line 34, ../sass/partials/global.scss */
 a {
   color: #023060;
   text-decoration: none;
@@ -161,17 +163,17 @@ a {
   transition: color 0.3s ease;
 }
 
-/* line 45, ../sass/partials/global.scss */
+/* line 46, ../sass/partials/global.scss */
 a::link {
   background-color: none;
 }
 
-/* line 49, ../sass/partials/global.scss */
+/* line 50, ../sass/partials/global.scss */
 a::visited {
   color: #023060;
 }
 
-/* line 53, ../sass/partials/global.scss */
+/* line 54, ../sass/partials/global.scss */
 a:hover {
   color: #68BCE2;
   text-decoration: none;
@@ -179,112 +181,134 @@ a:hover {
   transition: color 0.3s ease;
 }
 
-/* line 61, ../sass/partials/global.scss */
+/* line 62, ../sass/partials/global.scss */
 a:active {
   color: #023060;
 }
 
-/* line 67, ../sass/partials/global.scss */
+/* line 68, ../sass/partials/global.scss */
 .container {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 67, ../sass/partials/global.scss */
+  /* line 68, ../sass/partials/global.scss */
   .container {
     padding: 0;
   }
 }
 
-/* line 73, ../sass/partials/global.scss */
+/* line 74, ../sass/partials/global.scss */
 .row {
   margin: 0;
 }
 
-/* line 77, ../sass/partials/global.scss */
+/* line 78, ../sass/partials/global.scss */
 .full-width {
   width: 100%;
 }
 
-/* line 81, ../sass/partials/global.scss */
+/* line 82, ../sass/partials/global.scss */
 .grayscale {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
 
+/* line 87, ../sass/partials/global.scss */
+.full-width {
+  flex: 1;
+}
+
 /* line 2, ../sass/partials/_typography.scss */
+h1,
+h2,
+h3 {
+  font-family: 'DMSans-Bold';
+  font-weight: 700;
+}
+
+/* line 9, ../sass/partials/_typography.scss */
 h1 {
   color: #023060;
   font-size: 3rem;
-  font-weight: 700;
   line-height: 1.25em;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 2, ../sass/partials/_typography.scss */
+  /* line 9, ../sass/partials/_typography.scss */
   h1 {
-    font-size: 4rem;
+    font-size: 3.75rem;
   }
 }
 
-/* line 13, ../sass/partials/_typography.scss */
+/* line 19, ../sass/partials/_typography.scss */
 h2 {
   color: #023060;
   font-size: 2rem;
-  font-weight: 700;
   line-height: 1.25em;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 13, ../sass/partials/_typography.scss */
+  /* line 19, ../sass/partials/_typography.scss */
   h2 {
     font-size: 3rem;
   }
 }
 
-/* line 24, ../sass/partials/_typography.scss */
+/* line 29, ../sass/partials/_typography.scss */
 h3 {
   color: #023060;
   font-size: 1rem;
-  font-weight: 700;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 24, ../sass/partials/_typography.scss */
+  /* line 29, ../sass/partials/_typography.scss */
   h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 
-/* line 34, ../sass/partials/_typography.scss */
+/* line 38, ../sass/partials/_typography.scss */
 p {
   font-size: 1rem;
-  line-height: 1.7em;
+  line-height: 1.5em;
 }
 
-/* line 39, ../sass/partials/_typography.scss */
+/* line 43, ../sass/partials/_typography.scss */
 .large-text {
   font-size: 1rem;
   line-height: 1.5em;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 39, ../sass/partials/_typography.scss */
+  /* line 43, ../sass/partials/_typography.scss */
   .large-text {
-    font-size: 1.5rem;
+    font-size: 1.188rem;
   }
 }
 
-/* line 48, ../sass/partials/_typography.scss */
+/* line 52, ../sass/partials/_typography.scss */
 .color-primary {
   color: #023060;
 }
 
-/* line 52, ../sass/partials/_typography.scss */
+/* line 56, ../sass/partials/_typography.scss */
 .color-secondary {
   color: #68BCE2;
 }
 
-/* line 58, ../sass/partials/_typography.scss */
+/* line 60, ../sass/partials/_typography.scss */
+.font-weight-bold-mobile {
+  font-weight: 700;
+  /* Tablets and phablets */
+}
+@media only screen and (min-width: 768px) {
+  /* line 60, ../sass/partials/_typography.scss */
+  .font-weight-bold-mobile {
+    font-weight: inherit;
+  }
+}
+
+/* line 71, ../sass/partials/_typography.scss */
 .text-box h1,
 .text-box h2,
 .text-box h3,
@@ -295,7 +319,7 @@ p {
   margin-top: 5px;
   margin-bottom: 20px;
 }
-/* line 68, ../sass/partials/_typography.scss */
+/* line 81, ../sass/partials/_typography.scss */
 .text-box h1:first-child,
 .text-box h2:first-child,
 .text-box h3:first-child,
@@ -304,125 +328,125 @@ p {
 .text-box h6:first-child {
   padding-top: 0;
 }
-/* line 73, ../sass/partials/_typography.scss */
+/* line 86, ../sass/partials/_typography.scss */
 .text-box > h1 {
   font-size: 2em;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 73, ../sass/partials/_typography.scss */
+  /* line 86, ../sass/partials/_typography.scss */
   .text-box > h1 {
     font-size: 2em;
   }
 }
-/* line 81, ../sass/partials/_typography.scss */
+/* line 94, ../sass/partials/_typography.scss */
 .text-box > h2 {
   font-size: 1.8em;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 81, ../sass/partials/_typography.scss */
+  /* line 94, ../sass/partials/_typography.scss */
   .text-box > h2 {
     font-size: 1.8em;
   }
 }
-/* line 89, ../sass/partials/_typography.scss */
+/* line 102, ../sass/partials/_typography.scss */
 .text-box > h3 {
   font-size: 1.4em;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 89, ../sass/partials/_typography.scss */
+  /* line 102, ../sass/partials/_typography.scss */
   .text-box > h3 {
     font-size: 1.4em;
   }
 }
-/* line 97, ../sass/partials/_typography.scss */
+/* line 110, ../sass/partials/_typography.scss */
 .text-box > h4 {
   font-size: 1.2em;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 97, ../sass/partials/_typography.scss */
+  /* line 110, ../sass/partials/_typography.scss */
   .text-box > h4 {
     font-size: 1.2em;
   }
 }
-/* line 109, ../sass/partials/_typography.scss */
+/* line 122, ../sass/partials/_typography.scss */
 .text-box > p {
+  font-size: 1.188rem;
   line-height: 1.5em;
   margin-bottom: 20px;
 }
-/* line 113, ../sass/partials/_typography.scss */
+/* line 127, ../sass/partials/_typography.scss */
 .text-box > p:last-child {
   margin-bottom: 0;
 }
-/* line 118, ../sass/partials/_typography.scss */
+/* line 132, ../sass/partials/_typography.scss */
 .text-box strong {
   font-weight: 600;
 }
-/* line 124, ../sass/partials/_typography.scss */
+/* line 138, ../sass/partials/_typography.scss */
 .text-box ol li,
 .text-box ul li {
-  font-size: 0.9rem;
-  font-weight: 300;
+  font-size: 1.188rem;
   line-height: 2em;
   margin-bottom: 10px;
 }
-/* line 130, ../sass/partials/_typography.scss */
+/* line 143, ../sass/partials/_typography.scss */
 .text-box ol li:last-child,
 .text-box ul li:last-child {
   margin-bottom: 20px;
 }
-/* line 136, ../sass/partials/_typography.scss */
+/* line 149, ../sass/partials/_typography.scss */
 .text-box ol {
   padding-left: 20px;
   list-style-type: decimal;
 }
-/* line 140, ../sass/partials/_typography.scss */
+/* line 153, ../sass/partials/_typography.scss */
 .text-box ol li {
   padding-left: 20px;
 }
-/* line 145, ../sass/partials/_typography.scss */
+/* line 158, ../sass/partials/_typography.scss */
 .text-box ul {
   list-style-type: none;
 }
-/* line 148, ../sass/partials/_typography.scss */
+/* line 161, ../sass/partials/_typography.scss */
 .text-box ul li {
   display: flex;
 }
-/* line 152, ../sass/partials/_typography.scss */
+/* line 165, ../sass/partials/_typography.scss */
 .text-box ul li:before {
   content: '\f192';
   font-family: Fontawesome;
   padding-right: 2em;
 }
-/* line 158, ../sass/partials/_typography.scss */
+/* line 171, ../sass/partials/_typography.scss */
 .text-box ul li:last-child {
   margin-bottom: 20px;
 }
-/* line 164, ../sass/partials/_typography.scss */
+/* line 177, ../sass/partials/_typography.scss */
 .text-box img {
   display: inline-block;
   margin-bottom: 15px;
   height: auto;
 }
-/* line 170, ../sass/partials/_typography.scss */
+/* line 183, ../sass/partials/_typography.scss */
 .text-box iframe {
   display: block;
   width: 100%;
   margin-bottom: 15px;
 }
-/* line 177, ../sass/partials/_typography.scss */
+/* line 190, ../sass/partials/_typography.scss */
 .text-box.sm p {
   font-size: 0.9em;
   line-height: 1.7em;
 }
-/* line 183, ../sass/partials/_typography.scss */
+/* line 196, ../sass/partials/_typography.scss */
 .text-box table {
   font-size: 0.9em;
 }
-/* line 186, ../sass/partials/_typography.scss */
+/* line 199, ../sass/partials/_typography.scss */
 .text-box table thead {
   line-height: 1.2em;
 }
@@ -1439,7 +1463,7 @@ p {
 @media only screen and (min-width: 992px) {
   /* line 1, ../sass/partials/_navigation.scss */
   .page-header {
-    height: 80px;
+    height: 100px;
   }
 }
 /* line 18, ../sass/partials/_navigation.scss */
@@ -1470,10 +1494,11 @@ p {
 @media only screen and (min-width: 992px) {
   /* line 34, ../sass/partials/_navigation.scss */
   .page-header .brand img {
-    height: 2.5em;
+    height: 4.75rem;
+    margin-left: -15%;
   }
 }
-/* line 43, ../sass/partials/_navigation.scss */
+/* line 44, ../sass/partials/_navigation.scss */
 .page-header .main-navigation {
   flex: 1;
   display: flex;
@@ -1488,7 +1513,7 @@ p {
   /* Landscape tablets and desktop or laptops */
 }
 @media only screen and (min-width: 992px) {
-  /* line 43, ../sass/partials/_navigation.scss */
+  /* line 44, ../sass/partials/_navigation.scss */
   .page-header .main-navigation {
     padding: 0;
     padding-left: 4em;
@@ -1500,21 +1525,21 @@ p {
     justify-content: flex-end;
   }
 }
-/* line 70, ../sass/partials/_navigation.scss */
+/* line 71, ../sass/partials/_navigation.scss */
 .page-header .navigation-list {
   display: none;
   padding: 1rem 15px 0;
   /* Landscape tablets and desktop or laptops */
 }
 @media only screen and (min-width: 992px) {
-  /* line 70, ../sass/partials/_navigation.scss */
+  /* line 71, ../sass/partials/_navigation.scss */
   .page-header .navigation-list {
     display: block;
     padding: 0;
     background-color: transparent !important;
   }
 }
-/* line 80, ../sass/partials/_navigation.scss */
+/* line 81, ../sass/partials/_navigation.scss */
 .page-header .navigation-list > li {
   display: block;
   text-align: center;
@@ -1523,13 +1548,13 @@ p {
   margin-bottom: 20px;
   /* Landscape tablets and desktop or laptops */
 }
-/* line 87, ../sass/partials/_navigation.scss */
+/* line 88, ../sass/partials/_navigation.scss */
 .page-header .navigation-list > li:last-child {
   border-bottom: 0;
   margin: 0;
 }
 @media only screen and (min-width: 992px) {
-  /* line 80, ../sass/partials/_navigation.scss */
+  /* line 81, ../sass/partials/_navigation.scss */
   .page-header .navigation-list > li {
     display: inline-block;
     border-bottom: 0;
@@ -1539,56 +1564,56 @@ p {
     float: left;
   }
 }
-/* line 102, ../sass/partials/_navigation.scss */
+/* line 103, ../sass/partials/_navigation.scss */
 .page-header .navigation-list > li.active a {
   color: #68BCE2;
 }
-/* line 107, ../sass/partials/_navigation.scss */
+/* line 108, ../sass/partials/_navigation.scss */
 .page-header .navigation-list > li > a {
   display: block;
-  font-size: 0.9em;
-  font-weight: 500;
+  font-size: 1.188rem;
+  font-weight: 400;
   color: #023060;
   border-top: 2px solid transparent;
   transition: opacity 0.3s ease;
   /* Landscape tablets and desktop or laptops */
 }
-/* line 115, ../sass/partials/_navigation.scss */
+/* line 116, ../sass/partials/_navigation.scss */
 .page-header .navigation-list > li > a.active {
   /* Landscape tablets and desktop or laptops */
 }
 @media only screen and (min-width: 992px) {
-  /* line 115, ../sass/partials/_navigation.scss */
+  /* line 116, ../sass/partials/_navigation.scss */
   .page-header .navigation-list > li > a.active {
     border-color: secondary;
   }
 }
-/* line 121, ../sass/partials/_navigation.scss */
+/* line 122, ../sass/partials/_navigation.scss */
 .page-header .navigation-list > li > a:hover {
   opacity: 0.7;
   transition: opacity 0.3s ease;
 }
 @media only screen and (min-width: 992px) {
-  /* line 107, ../sass/partials/_navigation.scss */
+  /* line 108, ../sass/partials/_navigation.scss */
   .page-header .navigation-list > li > a {
     padding: 1em 0;
   }
 }
-/* line 133, ../sass/partials/_navigation.scss */
+/* line 134, ../sass/partials/_navigation.scss */
 .page-header .home-button {
   /* Landscape tablets and desktop or laptops */
 }
-/* line 134, ../sass/partials/_navigation.scss */
+/* line 135, ../sass/partials/_navigation.scss */
 .page-header .home-button .hamburger-box {
   margin-top: 6px;
 }
 @media only screen and (min-width: 992px) {
-  /* line 133, ../sass/partials/_navigation.scss */
+  /* line 134, ../sass/partials/_navigation.scss */
   .page-header .home-button {
     display: none;
   }
 }
-/* line 142, ../sass/partials/_navigation.scss */
+/* line 143, ../sass/partials/_navigation.scss */
 .page-header .home-button .menu-btn {
   outline: none;
 }
@@ -1605,7 +1630,7 @@ p {
 @media only screen and (min-width: 768px) {
   /* line 4, ../sass/partials/_footer.scss */
   .main-footer .content {
-    padding: 80px 0 20px;
+    padding: 150px 0 90px;
   }
 }
 /* line 11, ../sass/partials/_footer.scss */
@@ -1707,16 +1732,12 @@ p {
   transition: all 0.3s ease;
 }
 
-/* line 101, ../sass/partials/_footer.scss */
-.footer-form {
-  display: flex;
-}
-/* line 104, ../sass/partials/_footer.scss */
+/* line 102, ../sass/partials/_footer.scss */
 .footer-form input {
   outline: 0;
 }
-/* line 108, ../sass/partials/_footer.scss */
-.footer-form .email {
+/* line 106, ../sass/partials/_footer.scss */
+.footer-form input[type="email"] {
   background: transparent;
   border-right: 0;
   border: 1px solid white;
@@ -1725,22 +1746,23 @@ p {
   flex: 1;
   font-size: 0.8rem;
   padding: 0.8em 1em;
+  width: 100%;
 }
-/* line 118, ../sass/partials/_footer.scss */
-.footer-form .email::placeholder {
+/* line 117, ../sass/partials/_footer.scss */
+.footer-form input[type="email"]::placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-/* line 123, ../sass/partials/_footer.scss */
-.footer-form .email:-ms-input-placeholder {
+/* line 122, ../sass/partials/_footer.scss */
+.footer-form input[type="email"]:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
-/* line 127, ../sass/partials/_footer.scss */
-.footer-form .email::-ms-input-placeholder {
+/* line 126, ../sass/partials/_footer.scss */
+.footer-form input[type="email"]::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
-/* line 132, ../sass/partials/_footer.scss */
-.footer-form .submit {
+/* line 131, ../sass/partials/_footer.scss */
+.footer-form input[type="submit"] {
   background-color: #ffffff;
   border: 0;
   color: #023060;
@@ -1750,33 +1772,43 @@ p {
   padding: 0 20px;
   transition: all 0.4s ease;
 }
-/* line 142, ../sass/partials/_footer.scss */
-.footer-form .submit:hover {
+/* line 141, ../sass/partials/_footer.scss */
+.footer-form input[type="submit"]:hover {
   background-color: #68BCE2;
   transition: all 0.4s ease;
+}
+/* line 147, ../sass/partials/_footer.scss */
+.footer-form .wpcf7-form-control-wrap {
+  flex: 1;
+}
+/* line 151, ../sass/partials/_footer.scss */
+.footer-form .wpcf7-not-valid-tip {
+  bottom: -20px !important;
+  color: #F1B54C !important;
+  position: absolute !important;
+}
+/* line 157, ../sass/partials/_footer.scss */
+.footer-form .wpcf7 .ajax-loader {
+  right: 2.5rem !important;
+}
+/* line 161, ../sass/partials/_footer.scss */
+.footer-form .wpcf7-response-output {
+  color: #ffffff !important;
 }
 
 /* line 1, ../sass/partials/_hero.scss */
 .hero {
-  align-items: center;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  display: flex;
   min-height: 300px;
   overflow: hidden;
   position: relative;
   /* Landscape tablets and desktop or laptops */
 }
-@media only screen and (min-width: 992px) {
-  /* line 1, ../sass/partials/_hero.scss */
-  .hero {
-    min-height: 80vh;
-  }
-}
-/* line 15, ../sass/partials/_hero.scss */
+/* line 9, ../sass/partials/_hero.scss */
 .hero:before {
-  background: linear-gradient(90.01deg, rgba(2, 48, 96, 0.4) 0.01%, rgba(196, 196, 196, 0) 91.62%);
+  background: linear-gradient(90.01deg, rgba(255, 248, 255, 0.4) 0.01%, rgba(255, 255, 255, 0.3) 91.62%);
   bottom: 0;
   content: "";
   left: 0;
@@ -1785,15 +1817,26 @@ p {
   top: 0;
   z-index: 1;
 }
-/* line 26, ../sass/partials/_hero.scss */
+@media only screen and (min-width: 992px) {
+  /* line 1, ../sass/partials/_hero.scss */
+  .hero {
+    min-height: 750px;
+  }
+  /* line 23, ../sass/partials/_hero.scss */
+  .hero:before {
+    background: linear-gradient(90.01deg, rgba(2, 48, 96, 0.4) 0.01%, rgba(196, 196, 196, 0) 91.62%);
+  }
+}
+/* line 28, ../sass/partials/_hero.scss */
 .hero > * {
   position: relative;
   z-index: 2;
 }
 
-/* line 32, ../sass/partials/_hero.scss */
+/* line 34, ../sass/partials/_hero.scss */
 .blog-thumbnail {
   align-items: center;
+  background-color: #F1FAFE;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
@@ -1802,7 +1845,7 @@ p {
   /* Landscape tablets and desktop or laptops */
 }
 @media only screen and (min-width: 992px) {
-  /* line 32, ../sass/partials/_hero.scss */
+  /* line 34, ../sass/partials/_hero.scss */
   .blog-thumbnail {
     min-height: 300px;
   }
@@ -1849,6 +1892,10 @@ p {
 }
 
 /* line 2, ../sass/partials/_widgets.scss */
+.progress-line-number {
+  min-width: 1.5em;
+}
+/* line 6, ../sass/partials/_widgets.scss */
 .progress-line figure {
   align-items: center;
   display: flex;
@@ -1856,7 +1903,7 @@ p {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 8, ../sass/partials/_widgets.scss */
+  /* line 12, ../sass/partials/_widgets.scss */
   .progress-line figure:before {
     background-color: black;
     bottom: 0;
@@ -1868,23 +1915,23 @@ p {
     z-index: 0;
   }
 }
-/* line 20, ../sass/partials/_widgets.scss */
+/* line 24, ../sass/partials/_widgets.scss */
 .progress-line figure img {
   position: relative;
   z-index: 1;
 }
-/* line 28, ../sass/partials/_widgets.scss */
+/* line 32, ../sass/partials/_widgets.scss */
 .progress-line:first-child figure:before {
   bottom: 0;
   top: 50%;
 }
-/* line 37, ../sass/partials/_widgets.scss */
+/* line 41, ../sass/partials/_widgets.scss */
 .progress-line:last-child figure:before {
   bottom: 50%;
   top: 0;
 }
 
-/* line 45, ../sass/partials/_widgets.scss */
+/* line 49, ../sass/partials/_widgets.scss */
 .social-share-wrapper {
   margin-left: -12px;
 }
@@ -1900,7 +1947,7 @@ p {
 /* line 9, ../sass/partials/_forms.scss */
 .form label {
   display: block;
-  font-size: 0.8em;
+  font-size: 400;
   font-weight: 600;
   line-height: 1.4em;
   color: #023060;
@@ -1949,19 +1996,28 @@ p {
 /* line 55, ../sass/partials/_forms.scss */
 .wpcf7-response-output {
   border: 0 !important;
-  font-weight: 700;
   padding: 0 !important;
-  margin-bottom: 0 !important;
+  margin: 1.5rem 0 0 0 !important;
 }
 
-/* line 62, ../sass/partials/_forms.scss */
+/* line 61, ../sass/partials/_forms.scss */
 #comments {
   margin: 0 auto;
 }
 
-/* line 66, ../sass/partials/_forms.scss */
+/* line 65, ../sass/partials/_forms.scss */
 #comments, #respond, .comments-area, #wpdcom {
   max-width: 100%;
+}
+
+/* line 69, ../sass/partials/_forms.scss */
+.wpd-prim-button {
+  background-color: #68BCE2 !important;
+}
+
+/* line 73, ../sass/partials/_forms.scss */
+#wpdcom .wpd-thread-head .wpd-thread-info, #wpdcom .wpd-thread-head .wpdiscuz-user-settings {
+  border-color: #68BCE2 !important;
 }
 
 /* line 1, ../sass/partials/_backgrounds.scss */

@@ -1,8 +1,14 @@
 // Size
+h1,
+h2,
+h3 {
+	font-family: 'DMSans-Bold';
+	font-weight: $font-weight-bold;
+}
+
 h1 {
 	color: $primary;
 	font-size: 3rem;
-	font-weight: $font-weight-bold;
 	line-height: $line-height-small;
 
 	@include MQ(M) {
@@ -13,7 +19,6 @@ h1 {
 h2 {
 	color: $primary;
 	font-size: 2rem;
-	font-weight: $font-weight-bold;
 	line-height: $line-height-small;
 
 	@include MQ(M) {
@@ -24,37 +29,45 @@ h2 {
 h3 {
 	color: $primary;
 	font-size: $font-size-normal;
-	font-weight: $font-weight-bold;
-	
+
 	@include MQ(M) {
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 }
 
 p {
 	font-size: $font-size-normal;
-	line-height: $line-height-large;
+	line-height: $line-height-normal;
 }
 
-.large-text{
+.large-text {
 	font-size: $font-size-normal;
 	line-height: $line-height-normal;
-	
+
 	@include MQ(M) {
 		font-size: $font-size-large;
 	}
 }
 
-.color-primary{
+.color-primary {
 	color: $primary;
 }
 
-.color-secondary{
+.color-secondary {
 	color: $secondary;
+}
+
+.font-weight-bold-mobile{
+	font-weight: $font-weight-bold;
+	
+	@include MQ(M){
+		font-weight: inherit;
+	}
 }
 
 // RTE
 .text-box {
+
 	h1,
 	h2,
 	h3,
@@ -107,6 +120,7 @@ p {
 	> h6 {}
 
 	> p {
+		font-size: $font-size-large;
 		line-height: 1.5em;
 		margin-bottom: 20px;
 
@@ -122,8 +136,7 @@ p {
 	ol,
 	ul {
 		li {
-			font-size: 0.9rem;
-			font-weight: 300;
+			font-size: $font-size-large;
 			line-height: 2em;
 			margin-bottom: 10px;
 
